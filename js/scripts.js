@@ -56,10 +56,10 @@ var replaceTwos = function(rangeArray) {
   return rangeArray;
 }
 
-var replaceThrees = function(rangeArray) {
+var replaceThrees = function(rangeArray, inputName) {
   for (var j = 0; j < rangeArray.length; j++) {
     if (checkForThrees(rangeArray[j]) === true) {
-      rangeArray[j] = "I'm sorry, Dave. I'm afraid I can't do that.";
+      rangeArray[j] = "I'm sorry, " + inputName + ". I'm afraid I can't do that.";
     } else {
       continue;
     }
@@ -67,8 +67,8 @@ var replaceThrees = function(rangeArray) {
   return rangeArray;
 }
 
-var checkAndReplace123 = function(inputArray) {
-  replaceThrees(inputArray);
+var checkAndReplace123 = function(inputArray, inputName) {
+  replaceThrees(inputArray, inputName);
   replaceTwos(inputArray);
   replaceOnes(inputArray);
   return inputArray;
@@ -82,17 +82,19 @@ var reverseOutput = function(outputArray) {
 $(document).ready(function() {
   $("#buttonOriginal").click(function(event) {
     event.preventDefault();
+    var userName = $("#userName").val();
     var userInput = parseInt($("#userInput").val());
     var rangeOfNumbers = getNumberRange(userInput);
-    var output = checkAndReplace123(rangeOfNumbers);
+    var output = checkAndReplace123(rangeOfNumbers, userName);
     $("#output").text(output.join(", ")).show();
   })
 
   $("#buttonReverse").click(function(event) {
     event.preventDefault();
+    var userName = $("#userName").val();
     var userInput = parseInt($("#userInput").val());
     var rangeOfNumbers = getNumberRange(userInput);
-    var output = reverseOutput(checkAndReplace123(rangeOfNumbers));
+    var output = reverseOutput(checkAndReplace123(rangeOfNumbers, userName));
     $("#output").text(output.join(", ")).show();
   })
 });
