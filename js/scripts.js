@@ -67,6 +67,12 @@ var replaceThrees = function(rangeArray) {
   return rangeArray;
 }
 
+var checkAndReplace123 = function(inputArray) {
+  replaceThrees(inputArray);
+  replaceTwos(inputArray);
+  replaceOnes(inputArray);
+  return inputArray;
+}
 
 // Front-end Logic
 $(document).ready(function() {
@@ -74,13 +80,7 @@ $(document).ready(function() {
     event.preventDefault();
     var userInput = parseInt($("#userInput").val());
     var rangeOfNumbers = getNumberRange(userInput);
-
-    console.log(replaceThrees(rangeOfNumbers));
-    console.log(replaceTwos(rangeOfNumbers));
-    console.log(replaceOnes(rangeOfNumbers));
-
-    // Enter finalOutput below:
-    // var finalOutput = ;
-    // $("#output").text(finalOutput).show();
+    var output = checkAndReplace123(rangeOfNumbers);
+    $("#output").text(output).show();
   })
 });
