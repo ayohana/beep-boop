@@ -1,11 +1,22 @@
 // Back-end Logic
 var getNumberRange = function(input) {
-  var numbers = [];
+  var numberRange = [];
   for (var i = 0; i <= input; i++) {
-    numbers.push(i);
+    numberRange.push(i);
   }
-  return numbers;
+  return numberRange;
 }
+
+var checkForOnes = function(number) {
+  var ones = /[1]/gm;
+  if (number.match(ones)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(checkForOnes("20"));
 
 
 // Front-end Logic
