@@ -7,6 +7,22 @@ var getNumberRange = function(input) {
   return numberRange;
 }
 
+var checkName = function(name) {
+  if (name === "") {
+    return name = "Dave";
+  } else {
+    return name;
+  }
+}
+
+var checkNumber = function(number) {
+  if (isNaN(number) === true) {
+    return number = 3;
+  } else {
+    return number;
+  }
+}
+
 var checkForOnes = function(number) {
   var ones = /[1]/gm;
   if (number.match(ones)) {
@@ -82,8 +98,8 @@ var reverseOutput = function(outputArray) {
 $(document).ready(function() {
   $("#buttonOriginal").click(function(event) {
     event.preventDefault();
-    var userName = $("#userName").val();
-    var userInput = parseInt($("#userInput").val());
+    var userName = checkName($("#userName").val());
+    var userInput = checkNumber(parseInt($("#userInput").val()));
     var rangeOfNumbers = getNumberRange(userInput);
     var output = checkAndReplace123(rangeOfNumbers, userName);
     $("#output").text(output.join(", ")).show();
@@ -91,8 +107,8 @@ $(document).ready(function() {
 
   $("#buttonReverse").click(function(event) {
     event.preventDefault();
-    var userName = $("#userName").val();
-    var userInput = parseInt($("#userInput").val());
+    var userName = checkName($("#userName").val());
+    var userInput = checkNumber(parseInt($("#userInput").val()));
     var rangeOfNumbers = getNumberRange(userInput);
     var output = reverseOutput(checkAndReplace123(rangeOfNumbers, userName));
     $("#output").text(output.join(", ")).show();
