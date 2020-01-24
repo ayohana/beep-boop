@@ -2,7 +2,7 @@
 var getNumberRange = function(input) {
   var numberRange = [];
   for (var i = 0; i <= input; i++) {
-    numberRange.push(i);
+    numberRange.push(i.toString());
   }
   return numberRange;
 }
@@ -16,7 +16,16 @@ var checkForOnes = function(number) {
   }
 }
 
-console.log(checkForOnes("20"));
+var replaceOnes = function(rangeArray) {
+  for (var j = 0; j < rangeArray.length; j++) {
+    if (checkForOnes(rangeArray[j]) === true) {
+      rangeArray[j] = "Beep!";
+    } else {
+      continue;
+    }
+  }
+  return rangeArray;
+}
 
 
 // Front-end Logic
@@ -24,9 +33,12 @@ $(document).ready(function() {
   $("#beepBoopForm").submit(function(event) {
     event.preventDefault();
     var userInput = parseInt($("#userInput").val());
+    var rangeOfNumbers = getNumberRange(userInput);
 
-    var finalOutput = getNumberRange(userInput);
+    console.log(replaceOnes(rangeOfNumbers));
 
-    $("#output").text(finalOutput).show();
+    // Enter finalOutput below:
+    // var finalOutput = ;
+    // $("#output").text(finalOutput).show();
   })
 });
