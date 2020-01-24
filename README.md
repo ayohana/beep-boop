@@ -19,6 +19,7 @@ The user will be able to enter a new number and see new results over and over ag
 | :-------------     | :------------- | :------------- |
 | **Homepage** | User accesses index.html | Homepage with user input form |
 | **Program Gathers User Input** | "5" | "5" |
+| **Program Shows the Return Output** | "5" | "5" |
 | **Program Returns a Range of Numbers from 0 to User Inputted Number**| "5" | "0, 1, 2, 3, 4, 5" |
 | **Program Applies Rule #1: Replaces Numbers Containing a "1" with "Beep!"**| "1" | "0, Beep!" |
 | **Program Applies Rule #2: Replaces Numbers Containing a "2" with "Boop!"**| "2" | "0, Beep!, Boop!" |
