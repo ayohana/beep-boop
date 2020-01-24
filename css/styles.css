@@ -10,11 +10,10 @@ body {
 #navBar {
   background-color: rgb(62, 68, 68);
   color: white;
-  width: 30%;
 }
 
 #avatar {
-  max-width: 100%;
+  max-width: 90%;
 }
 
 #output {
