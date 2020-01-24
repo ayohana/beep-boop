@@ -25,6 +25,15 @@ var checkForTwos = function(number) {
   }
 }
 
+var checkForThrees = function(number) {
+  var threes = /[3]/gm;
+  if (number.match(threes)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 var replaceOnes = function(rangeArray) {
   for (var j = 0; j < rangeArray.length; j++) {
     if (checkForOnes(rangeArray[j]) === true) {
@@ -47,6 +56,17 @@ var replaceTwos = function(rangeArray) {
   return rangeArray;
 }
 
+var replaceThrees = function(rangeArray) {
+  for (var j = 0; j < rangeArray.length; j++) {
+    if (checkForThrees(rangeArray[j]) === true) {
+      rangeArray[j] = "I'm sorry, Dave. I'm afraid I can't do that.";
+    } else {
+      continue;
+    }
+  }
+  return rangeArray;
+}
+
 
 // Front-end Logic
 $(document).ready(function() {
@@ -55,8 +75,9 @@ $(document).ready(function() {
     var userInput = parseInt($("#userInput").val());
     var rangeOfNumbers = getNumberRange(userInput);
 
-    console.log(replaceOnes(rangeOfNumbers));
+    console.log(replaceThrees(rangeOfNumbers));
     console.log(replaceTwos(rangeOfNumbers));
+    console.log(replaceOnes(rangeOfNumbers));
 
     // Enter finalOutput below:
     // var finalOutput = ;
