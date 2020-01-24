@@ -7,13 +7,14 @@ body {
   color: white;
 }
 
-#top {
+#navBar {
   background-color: rgb(62, 68, 68);
   color: white;
+  width: 30%;
 }
 
 #avatar {
-  max-width: 250px;
+  max-width: 100%;
 }
 
 #output {

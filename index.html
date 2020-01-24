@@ -8,33 +8,59 @@
     <script src="js/bootstrap.js"></script>
     <script src="js/scripts.js"></script>
   </head>
+  
   <body>
     <div class="container">
-      <!-- Top Container -->
-      <div class="jumbotron jumbotron-fluid text-center" id="top">
-        <div class="container">
-          <img src="img/avatar.svg" id="avatar" alt="An avatar image" title="Game on!">
-          <br><br>
-          <h1>Beep Boop</h1>
-          <hr>
-          <p>Let's play!</p>
-        </div>
-      </div>
-
-      <div class="container">
-        <form id="beepBoopForm">
-          <div class="form-group m-4">
-            <label for="userInput">Enter a number:</label>
-            <input type="number" class="form-control form-control-lg" id="userInput" placeholder="5">
+      <div class="row">
+        <div class="col-4">
+          <!-- Left Vertical Nav Bar -->
+          <div class="container">
+            <nav class="nav flex-column" id="navBar">
+              
+                <img src="img/avatar.svg" id="avatar" alt="An avatar image" title="Game on!">
+                <h1>Beep Boop</h1>
+                <hr>
+                <p>Let's play!</p>
+            
+            </nav>
           </div>
-          <button type="submit" class="btn btn-primary btn-lg m-4">Beep Boop!</button>
-        </form>
-      </div>
+        </div>
+    
+        <!-- Top Container
+        <div class="jumbotron jumbotron-fluid text-center" id="top">
+          <div class="container">
+            <img src="img/avatar.svg" id="avatar" alt="An avatar image" title="Game on!">
+            <br><br>
+            <h1>Beep Boop</h1>
+            <hr>
+            <p>Let's play!</p>
+          </div>
+        </div> -->
 
-      <div class="container m-4">
-        <h3><span id="output"></span></h3>
-      </div>
+        <div class="col-8">
+          <div class="container" id="game">
+            <div class="row">
+              <div class="col-12">
+                <form id="beepBoopForm">
+                  <div class="form-group m-4">
+                    <label for="userInput">Enter a number:</label>
+                    <input type="number" class="form-control form-control-lg" id="userInput" placeholder="5">
+                  </div>
+                  <button type="submit" class="btn btn-primary btn-lg m-4">Beep Boop!</button>
+                </form>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="container m-4">
+                  <h3><span id="output"></span></h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
+      </div>
     </div>
   </body>
 </html>
