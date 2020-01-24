@@ -6,13 +6,24 @@
 
 ## Description
 
-**This web application is a game of Beep Boop.** It takes a number from a user and returns a range of numbers from 0 to the user inputted number with the following exceptions in their order of precedence from the lowest (1) to the highest(3):
+**This web application is a game of Beep Boop.** It takes a number from a user and returns a range of numbers from 0 to the user inputted number with the following rules/exceptions in their order of precedence from the lowest (1) to the highest(3):
 
-1. Numbers containing a 1 will be replaced with "Beep!"
-2. Numbers containing a 2 will be replaced with "Boop!"
-3. Numbers containing a 3 will be replaced with "I'm sorry, Dave. I'm afraid I can't do that."
+1. Numbers that contains a 1 will be replaced with "Beep!"
+2. Numbers that contains a 2 will be replaced with "Boop!"
+3. Numbers that contains a 3 will be replaced with "I'm sorry, Dave. I'm afraid I can't do that."
 
 The user will be able to enter a new number and see new results over and over again.
+
+### Specs
+| Spec | Input | Output |
+| :-------------     | :------------- | :------------- |
+| **Homepage** | User accesses index.html | Homepage with user input form |
+| **Program Gathers User Input** | "5" | "5" |
+| **Program Returns a Range of Numbers from 0 to User Inputted Number**| "5" | "0, 1, 2, 3, 4, 5" |
+| **Program Applies Rule #1: Replaces Numbers Containing a "1" with "Beep!"**| "1" | "0, Beep!" |
+| **Program Applies Rule #2: Replaces Numbers Containing a "2" with "Boop!"**| "2" | "0, Beep!, Boop!" |
+| **Program Applies Rule #3: Replaces Numbers Containing a "3" with "I'm sorry, Dave. I'm afraid I can't do that."**| "3" | "0, Beep!, Boop!, I'm sorry, Dave. I'm afraid I can't do that." |
+| **Program Applies Precedence Levels to the Rules: <br> &nbsp;&nbsp; #1 (Lowest) <br> &nbsp;&nbsp; #2 (Middle) <br> &nbsp;&nbsp; #3 (Highest)**| "13" | "0, Beep!, Boop!, I'm sorry, Dave. I'm afraid I can't do that., 4, 5, 6, 7, 8, 9, Beep!, Beep!, Boop!, I'm sorry, Dave. I'm afraid I can't do that." |
 
 ## Setup/Installation Requirements
 
