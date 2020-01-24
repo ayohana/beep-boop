@@ -1,3 +1,21 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(29, 28, 28);
+  color: white;
+}
+
+#top {
+  background-color: rgb(62, 68, 68);
+  color: white;
+}
+
+#avatar {
+  max-width: 250px;
+}
+
 #output {
   display: none;
 }
