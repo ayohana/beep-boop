@@ -13,31 +13,32 @@
 
     <div class="container-fluid">
       <div class="row">
-        <div class="col-lg-3 col-xl-3"> <!-- Big Column #1 -->
+        <div class="col-lg-3 col-xl-3">  <!-- Big Column #1 -->
           <!-- Left Vertical Nav Bar -->
-          <div class="container">
+          <div class="container text-center">
             <nav class="nav flex-column" id="navBar">
               <img src="img/avatar.svg" id="avatar" alt="An avatar image" title="Game on!">
+              <br>
               <h1>Beep Boop</h1>
-              <hr>
+              <br>
               <p>Let's play!</p>
             </nav>
          </div>
         </div>
 
-        <div class="col-lg-9 col-xl-9"> <!-- Big Column #2 -->
-          <div class="container" id="game">
-            <div class="row"> <!-- Row #1 in Big Column #2 -->
+        <div class="col-lg-9 col-xl-9">  <!-- Big Column #2 -->
+          <div class="container m-4">
+            <div class="row">  <!-- Row #1 in Big Column #2 -->
               <form id="beepBoopForm">
-                <div class="form-group m-4">
+                <div class="form-group mt-4">
                   <label for="userInput">Enter a number:</label>
                   <input type="number" class="form-control form-control-lg" id="userInput" placeholder="5">
                 </div>
-                <button type="submit" class="btn btn-primary btn-lg m-4">Beep Boop!</button>
+                <button type="submit" class="btn btn-primary btn-lg mt-4">Beep Boop!</button>
               </form>
             </div>
-            <div class="row"> <!-- Row #2 in Big Column #2 -->
-              <div class="container m-4">
+            <div class="row">  <!-- Row #2 in Big Column #2 -->
+              <div class="mt-5">
                 <h3><span id="output"></span></h3>
               </div>
             </div>
