@@ -16,9 +16,29 @@ var checkForOnes = function(number) {
   }
 }
 
+var checkForTwos = function(number) {
+  var twos = /[2]/gm;
+  if (number.match(twos)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 var replaceOnes = function(rangeArray) {
   for (var j = 0; j < rangeArray.length; j++) {
     if (checkForOnes(rangeArray[j]) === true) {
+      rangeArray[j] = "Beep!";
+    } else {
+      continue;
+    }
+  }
+  return rangeArray;
+}
+
+var replaceTwos = function(rangeArray) {
+  for (var j = 0; j < rangeArray.length; j++) {
+    if (checkForTwos(rangeArray[j]) === true) {
       rangeArray[j] = "Beep!";
     } else {
       continue;
@@ -36,6 +56,7 @@ $(document).ready(function() {
     var rangeOfNumbers = getNumberRange(userInput);
 
     console.log(replaceOnes(rangeOfNumbers));
+    console.log(replaceTwos(rangeOfNumbers));
 
     // Enter finalOutput below:
     // var finalOutput = ;
