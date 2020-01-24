@@ -6,7 +6,7 @@
 
 ## Description
 
-![An screenshot of Beep Boop's homepage](/img/homepage.jpg/)
+![A screenshot of Beep Boop's homepage](/img/homepage.JPG)
 
 **This web application is a game of _Beep Boop_.** It takes a number from a user and returns a range of numbers from 0 to the user inputted number with the following rules/exceptions in their order of precedence from the lowest (1) to the highest(3):
 
