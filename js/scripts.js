@@ -39,7 +39,7 @@ var replaceOnes = function(rangeArray) {
 var replaceTwos = function(rangeArray) {
   for (var j = 0; j < rangeArray.length; j++) {
     if (checkForTwos(rangeArray[j]) === true) {
-      rangeArray[j] = "Beep!";
+      rangeArray[j] = "Boop!";
     } else {
       continue;
     }
