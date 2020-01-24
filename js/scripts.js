@@ -74,13 +74,25 @@ var checkAndReplace123 = function(inputArray) {
   return inputArray;
 }
 
+var reverseOutput = function(outputArray) {
+  return outputArray.reverse();
+}
+
 // Front-end Logic
 $(document).ready(function() {
-  $("#beepBoopForm").submit(function(event) {
+  $("#buttonOriginal").click(function(event) {
     event.preventDefault();
     var userInput = parseInt($("#userInput").val());
     var rangeOfNumbers = getNumberRange(userInput);
     var output = checkAndReplace123(rangeOfNumbers);
-    $("#output").text(output).show();
+    $("#output").text(output.join(", ")).show();
+  })
+
+  $("#buttonReverse").click(function(event) {
+    event.preventDefault();
+    var userInput = parseInt($("#userInput").val());
+    var rangeOfNumbers = getNumberRange(userInput);
+    var output = reverseOutput(checkAndReplace123(rangeOfNumbers));
+    $("#output").text(output.join(", ")).show();
   })
 });

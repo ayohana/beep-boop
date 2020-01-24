@@ -47,6 +47,7 @@ Feel free to provide feedback via email: adela.yohana@gmail.com.
 * HTML
 * CSS
 * Bootstrap
+* Google Fonts
 * JavaScript
   - Arrays
   - Looping
