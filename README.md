@@ -6,13 +6,13 @@
 
 ## Description
 
-**This web application is a game of Beep Boop.** It takes a number from a user and returns a range of numbers from 0 to the user inputted number with the following rules/exceptions in their order of precedence from the lowest (1) to the highest(3):
+**This web application is a game of _Beep Boop_.** It takes a number from a user and returns a range of numbers from 0 to the user inputted number with the following rules/exceptions in their order of precedence from the lowest (1) to the highest(3):
 
 1. Numbers that contains a 1 will be replaced with "Beep!"
 2. Numbers that contains a 2 will be replaced with "Boop!"
 3. Numbers that contains a 3 will be replaced with "I'm sorry, Dave. I'm afraid I can't do that."
 
-The user will be able to enter a new number and see new results over and over again.
+The user will be able to enter a new number and see new results over and over again. In addition, the user will be able to **_Boop Beep_** to reverse the order of the output.
 
 ### Specs
 | Spec | Input | Output |
@@ -25,6 +25,7 @@ The user will be able to enter a new number and see new results over and over ag
 | **Program Applies Rule #2: Replaces Numbers Containing a "2" with "Boop!"**| "2" | "0, Beep!, Boop!" |
 | **Program Applies Rule #3: Replaces Numbers Containing a "3" with "I'm sorry, Dave. I'm afraid I can't do that."**| "3" | "0, Beep!, Boop!, I'm sorry, Dave. I'm afraid I can't do that." |
 | **Program Applies Precedence Levels to the Rules: <br> &nbsp;&nbsp; #1 (Lowest) <br> &nbsp;&nbsp; #2 (Middle) <br> &nbsp;&nbsp; #3 (Highest)**| "13" | "0, Beep!, Boop!, I'm sorry, Dave. I'm afraid I can't do that., 4, 5, 6, 7, 8, 9, Beep!, Beep!, Boop!, I'm sorry, Dave. I'm afraid I can't do that." |
+| **Program Allows User to Reverse the Output"**| "3" | "I'm sorry, Dave. I'm afraid I can't do that., Boop!, Beep!, 0" |
 
 ## Setup/Installation Requirements
 
