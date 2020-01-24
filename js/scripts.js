@@ -14,7 +14,8 @@ $(document).ready(function() {
     event.preventDefault();
     var userInput = parseInt($("#userInput").val());
 
-    console.log(getNumberRange(userInput));
-    
+    var finalOutput = getNumberRange(userInput);
+
+    $("#output").text(finalOutput).show();
   })
 });
