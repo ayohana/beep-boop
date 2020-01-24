@@ -5,6 +5,11 @@ html {
 body {
   background-color: rgb(29, 28, 28);
   color: white;
+  font-family: 'Roboto Slab', serif;
+}
+
+h1 {
+  font-family: 'Press Start 2P', cursive;
 }
 
 #navBar {
