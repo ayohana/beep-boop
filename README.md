@@ -8,13 +8,13 @@
 
 ![A screenshot of Beep Boop's homepage](/img/homepage.JPG)
 
-**This web application is a game of _Beep Boop_.** It takes a number from a user and returns a range of numbers from 0 to the user inputted number with the following rules/exceptions in their order of precedence from the lowest (1) to the highest(3):
+**This web application is a game of _Beep Boop_.** It takes a name (for example, _Dave_) and a number from a user and returns a range of numbers from 0 to the user inputted number with the following rules in the order of their precedence from the lowest(1) to the highest(3):
 
-1. Numbers that contains a 1 will be replaced with "Beep!"
-2. Numbers that contains a 2 will be replaced with "Boop!"
-3. Numbers that contains a 3 will be replaced with "I'm sorry, Dave. I'm afraid I can't do that."
+1. Numbers that contain a "1" will be replaced with "Beep!"
+2. Numbers that contain a "2" will be replaced with "Boop!"
+3. Numbers that contain a "3" will be replaced with "I'm sorry, Dave. I'm afraid I can't do that."
 
-The user will be able to enter a new number and see new results over and over again. In addition, the user will be able to **_Boop Beep_** to reverse the order of the output.
+The user will be able to enter a new number and see new results over and over again. The user can also play without entering any input as the application holds default inputs of "Dave" and the number "3". In addition, the user will be able to **_Boop Beep_** to reverse the order of the output.
 
 ## Specs
 
@@ -33,7 +33,7 @@ The user will be able to enter a new number and see new results over and over ag
 | **Program Applies Precedence Levels to the Rules: <br> &nbsp;&nbsp; #1 (Lowest) <br> &nbsp;&nbsp; #2 (Middle) <br> &nbsp;&nbsp; #3 (Highest)**| "13" | "0, Beep!, Boop!, I'm sorry, Dave. I'm afraid I can't do that., 4, 5, 6, 7, 8, 9, Beep!, Beep!, Boop!, I'm sorry, Dave. I'm afraid I can't do that." |
 | **Program Allows User to Reverse the Output"**| "3" | "I'm sorry, Dave. I'm afraid I can't do that., Boop!, Beep!, 0" |
 | **Program Gathers User's Name and Replaces "Dave" with the User's Name**| "Amy", "3" | "0, Beep!, Boop!, I'm sorry, Amy. I'm afraid I can't do that." |
-| **Program Has Default Inputs of "Dave" and/or "3" if the User Inputs are Empty.**| "", "" | "0, Beep!, Boop!, I'm sorry, Dave. I'm afraid I can't do that." |
+| **Program Holds Default Inputs of "Dave" and/or "3" if the User Input(s) is/are Empty.**| "", "" | "0, Beep!, Boop!, I'm sorry, Dave. I'm afraid I can't do that." |
 </details>
 
 ## Setup/Installation Requirements
