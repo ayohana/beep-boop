@@ -8,19 +8,11 @@ var getNumberRange = function(input) {
 }
 
 var checkName = function(name) {
-  if (name === "") {
-    return name = "Dave";
-  } else {
-    return name;
-  }
+  return (name === "" ? name = "Dave" : name);
 }
 
 var checkNumber = function(number) {
-  if (isNaN(number) === true) {
-    return number = 3;
-  } else {
-    return number;
-  }
+  return (isNaN(number) ? number = 3 : number);
 }
 
 var checkForOnes = function(number) {
