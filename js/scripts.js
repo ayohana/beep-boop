@@ -7,7 +7,9 @@ var checkNumber = function(number) {
   return (isNaN(number) ? number = 3 : number);
 }
 
-var checkAndReplace123 = function(inputNumber, inputName) {
+var game = function(inputName, inputNumber) {
+  inputName = checkName(inputName);
+  inputNumber = checkNumber(inputNumber);
   var rangeArray = [];
   var ones = /[1]/gm;
   var twos = /[2]/gm;
@@ -36,17 +38,13 @@ var reverseOutput = function(outputArray) {
 $(document).ready(function() {
   $("#buttonOriginal").click(function(event) {
     event.preventDefault();
-    var userName = checkName($("#userName").val());
-    var userNumber = checkNumber(parseInt($("#userNumber").val()));
-    var output = checkAndReplace123(userNumber, userName);
+    var output = game($("#userName").val(), parseInt($("#userNumber").val()));
     $("#output").text(output.join(", ")).show();
   })
 
   $("#buttonReverse").click(function(event) {
     event.preventDefault();
-    var userName = checkName($("#userName").val());
-    var userNumber = checkNumber(parseInt($("#userNumber").val()));
-    var output = reverseOutput(checkAndReplace123(userNumber, userName));
+    var output = reverseOutput(game($("#userName").val(), parseInt($("#userNumber").val())));
     $("#output").text(output.join(", ")).show();
   })
 });
