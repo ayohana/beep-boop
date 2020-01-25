@@ -7,7 +7,7 @@ var checkNumber = function(number) {
   return (isNaN(number) ? number = 3 : number);
 }
 
-var game = function(inputName, inputNumber) {
+var checkAndReplace = function(inputName, inputNumber) {
   inputName = checkName(inputName);
   inputNumber = checkNumber(inputNumber);
   var rangeArray = [];
@@ -30,21 +30,19 @@ var game = function(inputName, inputNumber) {
   return rangeArray;
 }
 
-var reverseOutput = function(outputArray) {
-  return outputArray.reverse();
+var game = function() {
+  event.preventDefault();
+  $("#output").show();
+  return checkAndReplace($("#userName").val(), parseInt($("#userNumber").val()));
 }
 
 // Front-end Logic
 $(document).ready(function() {
   $("#buttonOriginal").click(function(event) {
-    event.preventDefault();
-    var output = game($("#userName").val(), parseInt($("#userNumber").val()));
-    $("#output").text(output.join(", ")).show();
+    $("#output").text(game().join(", "));
   })
 
   $("#buttonReverse").click(function(event) {
-    event.preventDefault();
-    var output = reverseOutput(game($("#userName").val(), parseInt($("#userNumber").val())));
-    $("#output").text(output.join(", ")).show();
+    $("#output").text(game().reverse().join(", "));
   })
 });
